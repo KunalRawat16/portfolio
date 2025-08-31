@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill - Kunal Rawat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="hero-header">
+      <div class="wrapper">
+        <header>
+          <div class="logo">
+            <i class="fa-solid fa-k"></i>
+            <div class="logo-text">Kunal Rawat</div>
+          </div>
+          <nav>
+            <div class="togglebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="navlinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="skill.html" class="active">Skill</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="skill-section">
+          <!-- Info text -->
+          <div class="skills-info">
+            <h2><span class="highlight">Skills</span> and tools</h2>
+            <p>
+              For a more detailed overview, please feel free to check the tools
+              that were used on a per-project basis.
+            </p>
+          </div>
+
+          <!-- Animated skills cloud -->
+          <div class="skills-cloud" id="skills-cloud">
+            <!-- Skills will be injected here by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const skills = [
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "Bootstrap",
+        "Tailwind CSS",
+        "Vercel",
+        "GitHub Pages",
+        "react js",
+        "git",
+        "github",
+      ];
+
+      const cloud = document.getElementById("skills-cloud");
+      const cloudWidth = cloud.clientWidth;
+      const cloudHeight = cloud.clientHeight;
+      const skillElements = [];
+
+      // Create skill elements with random initial positions
+      skills.forEach((skill) => {
+        const span = document.createElement("span");
+        span.classList.add("skill");
+        span.textContent = skill;
+
+        // Random start position within the cloud container
+        span.style.left = Math.random() * (cloudWidth - 100) + "px";
+        span.style.top = Math.random() * (cloudHeight - 30) + "px";
+
+        cloud.appendChild(span);
+        skillElements.push({
+          element: span,
+          x: parseFloat(span.style.left),
+          y: parseFloat(span.style.top),
+          dx: Math.random() * 1.2 - 0.6, // random X velocity between -0.6 and 0.6
+          dy: Math.random() * 1.2 - 0.6, // random Y velocity between -0.6 and 0.6
+        });
+      });
+
+      // Animate the words
+      function animate() {
+        skillElements.forEach((s) => {
+          s.x += s.dx;
+          s.y += s.dy;
+
+          // Bounce off the edges of container
+          if (s.x <= 0 || s.x >= cloudWidth - s.element.offsetWidth) s.dx *= -1;
+          if (s.y <= 0 || s.y >= cloudHeight - s.element.offsetHeight)
+            s.dy *= -1;
+
+          s.element.style.left = s.x + "px";
+          s.element.style.top = s.y + "px";
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

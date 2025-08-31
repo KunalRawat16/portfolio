@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hero-header {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: #222;
+}
+
+.wrapper {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 40px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo i {
+  height: 40px;
+  width: 40px;
+  background-color: #007ced;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logo .logo-text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+
+nav .togglebtn {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 45px;
+  right: 3%;
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+}
+
+nav .togglebtn span {
+  display: block;
+  background-color: #007ced;
+  margin: 5px 0px;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+  transition-property: transform, opacity;
+}
+
+nav .navlinks {
+  list-style-type: none;
+}
+
+nav .navlinks li {
+  display: inline-block;
+}
+
+nav .navlinks li a {
+  color: #e5e5e5;
+  margin-right: 2.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.container .hero-pic {
+  width: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 15px solid #444;
+  box-shadow: 5px 7px 25px rgb(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.hero-pic img:hover {
+  transform: scale(1.2);
+}
+
+.hero-text {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text h5 {
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+.hero-text h5 span {
+  color: #007ced;
+  font-size: 16px;
+}
+
+.hero-text h1 {
+  color: #007ced;
+  font-size: 3rem;
+}
+
+.hero-text p {
+  color: #e5e5e5;
+}
+
+.btn-group {
+  margin: 45px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-group .btn {
+  border-color: #d5d5d5;
+  color: #fff;
+  background-color: #333;
+  padding: 12px 25px;
+  margin: 5px 0;
+  margin-right: 7px;
+  border-radius: 30px;
+  border: 2px solid #e5e5e5;
+}
+
+.btn.active {
+  border: 2px solid #007ced;
+}
+
+.hero-text .social i {
+  color: #e5e5e5;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.hero-text .social i:hover {
+  color: #007ced;
+  transform: rotate(360deg);
+}
+
+/* Resposinve design & display navbar for small screen  */
+@media (max-width: 930px) {
+  nav .togglebtn {
+    display: inline;
+  }
+  /* for toggle btn  */
+  .click {
+    top: 45px;
+  }
+  .click span {
+    position: absolute;
+    margin-top: 12px;
+  }
+
+  .click span:first-child {
+    transform: rotate(-40deg);
+  }
+
+  .click span:nth-child(2) {
+    opacity: 0;
+    margin: 0;
+  }
+
+  .click span:last-child {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  nav .navlinks {
+    position: absolute;
+    top: 110px;
+    right: -100%;
+    bottom: 60%;
+    width: 60%;
+    height: 100vh;
+    background-color: #222;
+    z-index: 3;
+    box-shadow: 5px 13px 30px rgb(0, 0, 0, 0.1);
+    transition: 0.5s;
+    padding: 25px 0px;
+  }
+
+  nav .navlinks li {
+    display: block;
+  }
+
+  nav .navlinks li a {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .navlinks li a.active {
+    border-bottom: 2px solid blue; /* 👈 underline active */
+    font-weight: bold;
+  }
+
+  nav .navlinks.open {
+    right: 0;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-group .btn {
+    width: 80%;
+    text-align: center;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  .hero-text {
+    padding: 40px 0px;
+  }
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.contact-section div {
+  width: 48%;
+}
+
+.contact-section div img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+form {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+form input {
+  background-color: #444;
+  color: #e5e5e5;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form textarea {
+  background-color: #444;
+  display: block;
+  color: #e5e5e5;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form button {
+  background-color: #007ced;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005bb5;
+  transition: background-color 0.3s ease;
+}
+
+form button:active {
+  background-color: #004080;
+  transition: background-color 0.3s ease;
+}
+
+.skill-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 2rem 2rem;
+}
+
+.skills-info {
+  max-width: 40%;
+}
+
+.skills-info h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.skills-info h2 .highlight {
+  color: #00b894; /* green */
+}
+
+.skills-info p {
+  margin-top: 15px;
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.skills-cloud {
+  position: relative;
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  /* border: 1px solid #222; */
+  border-radius: 10px;
+  /* background-color: #181818; */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 10px;
+}
+
+.skill {
+  position: absolute;
+  color: #eee;
+  font-weight: 500;
+  cursor: default;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.skill:hover {
+  color: #00b894;
+  transform: scale(1.2);
+  z-index: 10;
+}
