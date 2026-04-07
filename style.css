@@ -360,7 +360,7 @@ form button:active {
 .main-title {
     font-family: 'Serif', serif;
     /* Use a font like Playfair Display */
-    font-size: clamp(4rem, 15vw, 10rem);
+    font-size: clamp(4rem, 15vw, 5rem);
     text-align: center;
     border-bottom: 1px solid #444;
     margin: 0;
