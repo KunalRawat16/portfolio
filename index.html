@@ -1,73 +1,434 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Kunal Rawat</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-  <body>
+<body>
+
+    <!-- header section  -->
     <div class="hero-header">
-      <div class="wrapper">
-        <header>
-          <div class="logo">
-            <i class="fa-solid fa-k"></i>
-            <div class="logo-text">Kunal Rawat</div>
-          </div>
-          <nav>
-            <div class="togglebtn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <ul class="navlinks">
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="education.html">Education</a></li>
-              <li><a href="skill.html">Skill</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-        <div class="container">
-          <div class="hero-pic">
-            <img src="Profile.jpg" alt="Profile pic" srcset="" />
-          </div>
-          <div class="hero-text">
-            <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
-            <h1>Kunal Rawat</h1>
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-k"></i>
+                    <div class="logo-text">Kunal Rawat</div>
+                </div>
+                <nav>
 
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-              hic expedita totam necessitatibus velit aliquam, ex perferendis.
-              Soluta a, exercitationem commodi earum voluptatem eum voluptate.
-            </p>
-            <div class="btn-group">
-              <a href="Frontend_dev.pdf" class="btn active" >Download CV</a>
-              <a href="contact.html" class="btn">Contact</a>
-            </div>
-
-            <div class="social">
-              <a href="https://github.com/KunalRawat16"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/kunal-rawat-917254210/"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://www.instagram.com/_d.kunal_/"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-          </div>
+                    <ul class="sidebar">
+                        <li onclick="closeSidebar()"><a href="javascript:void(0)"><img src="close.svg" alt=""></a></li>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skill">Skill</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <ul class="navlinks">
+                        <li class="hideOnmobile"><a href="#" class="active">Home</a></li>
+                        <li class="hideOnmobile"><a href="#about">About</a></li>
+                        <li class="hideOnmobile"><a href="#education">Education</a></li>
+                        <li class="hideOnmobile"><a href="#skill">Skill</a></li>
+                        <li class="hideOnmobile"><a href="#projects">Projects</a></li>
+                        <li class="hideOnmobile"><a href="#contact">Contact</a></li>
+                        <li class="menuButton" onclick="showSidebar()"><a href="javascript:void(0)"><img src="menu.svg"
+                                    alt=""></a></li>
+                    </ul>
+                </nav>
+            </header>
         </div>
-      </div>
     </div>
 
+
+    <!-- hero section  -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-pic">
+                <img src="Profile.jpg" alt="Profile pic" srcset="" />
+            </div>
+            <div class="hero-text">
+                <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                <h1>Kunal Rawat</h1>
+
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum hic expedita totam
+                    necessitatibus velit
+                    aliquam, ex perferendis. Soluta a, exercitationem commodi earum voluptatem eum voluptate.
+                </p>
+                <div class="btn-group">
+                    <a href="Frontend_dev.pdf" class="btn active">Download CV</a>
+                    <a href="contact.html" class="btn">Contact</a>
+                </div>
+
+                <div class="social">
+                    <a href="https://github.com/KunalRawat16"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kunal-rawat-917254210/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/dev.kunal_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- about section -->
+    <section id="about">
+        <section class="about-section">
+            <div class="header-container">
+                <h1 class="main-title" style="color: #007ced;">ABOUT ME</h1>
+            </div>
+
+            <div class="grid-container">
+                <div class="grid-item img-box">
+                    <img src="profile1.jpg" alt="Profile Left" />
+                </div>
+
+                <div class="grid-item text-box">
+                    <p>
+                        I am a passionate and curious Frontend Developer who loves building simple and useful
+                        websites. I enjoy
+                        learning new technologies and improving my skills every day. I always try to write clean
+                        and
+                        easy-to-understand code so that my work stays organized.
+                    </p>
+                    <!-- <p>
+                  I have a strong interest in web development and design. I like
+                  creating user-friendly interfaces that look good and work
+                  smoothly. I believe that practice and consistency are the key
+                  to becoming better in this field.
+                </p> -->
+                </div>
+
+                <div class="grid-item text-box">
+                    <!-- <p>
+                  I am a fresher who is looking for an opportunity to start my
+                  career in the IT industry. I am ready to learn, grow, and work
+                  hard in a professional environment. I am also interested in
+                  software testing and want to build my future in this field.
+                </p> -->
+                    <p>
+                        Apart from coding, I enjoy exploring new ideas and technologies. I like solving problems
+                        and finding
+                        better ways to do things. My goal is to become a skilled developer and contribute to
+                        real-world
+                        projects.
+                    </p>
+                </div>
+                <div class="grid-item img-box">
+                    <img src="profile2.jpg" alt="Profile Right" />
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <!-- education section -->
+    <section id="education">
+        <h2 class="edu-title">Education</h2>
+
+        <div class="timeline">
+
+            <!-- Schooling -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Schooling (10th & 12th - PCM)</h3>
+                    <span>2018 – 2020</span>
+                    <p>
+                        I completed my schooling with Physics, Chemistry, and Mathematics. This is where I built
+                        my base in
+                        logical thinking and problem-solving.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Graduation -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>B.Sc (PCM) - JNCU</h3>
+                    <span>2020 – 2023</span>
+                    <p>
+                        I studied core subjects like Physics, Chemistry, and Mathematics. I also started
+                        learning programming
+                        and web development.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Master -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>MCA - BBAU</h3>
+                    <span>2023 – 2025</span>
+                    <p>
+                        Recent graduate, focusing on software development, frontend technologies, and software
+                        testing.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- skill section -->
+    <section id="skill">
+        <!-- https://workik.com/top-six-skill-set-widgets-for-websites -->
+        <div class="new_skills">
+            <div class="responsive-container-block bigContainer">
+                <div class="responsive-container-block Container">
+                    <div class="responsive-container-block imgContainer">
+                        <div class="pinkBG">
+                        </div>
+                        <img class="bigImg" src="SkillSectionImage.jpg">
+                    </div>
+                    <div class="responsive-container-block textContainer">
+                        <p class="text-blk heading">
+                            Top Skills
+                        </p>
+
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I can create well-structured and semantic web pages using HTML. I understand
+                                tags, forms, and page
+                                structure clearly.
+                            </p>
+                        </div>
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I can design responsive and modern layouts using CSS, Flexbox, and Grid. I also
+                                create clean UI with
+                                good spacing and colors.
+                            </p>
+                        </div>
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I know the basics of JavaScript, including DOM manipulation, events, and simple
+                                logic building.
+                            </p>
+                        </div>
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I can make websites mobile-friendly using media queries and flexible layouts.
+                            </p>
+                        </div>
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I use Git for version control and GitHub to manage and share my projects.
+                            </p>
+                        </div>
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I understand basic testing concepts like test cases, bug reporting, and manual
+                                testing.
+                            </p>
+                        </div>
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I can solve basic coding problems and debug issues in code.
+                            </p>
+                        </div>
+                        <div class="textRow">
+                            <div class="bullet">
+                            </div>
+                            <p class="text-blk bulletText">
+                                I am a fast learner and always ready to learn new technologies and tools.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+
+
+
+    <!-- projects section -->
+    <section id="projects">
+        <h2 class="project-title">My Work</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <img src="project_image/energy-drink-landing-page.png" alt="project">
+                <h3>Energy Drink Landing Page</h3>
+                <p>A modern landing page for an energy drink brand.</p>
+                <div class="tags">HTML • CSS • JS</div>
+                <div class="btns">
+                    <a href="https://energy-drink-liard.vercel.app/">Live</a>
+                    <a href="https://github.com/KunalRawat16/energy-drink">Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="project_image/Nike-landing-page.png" alt="project">
+                <h3>Nike Shoe Landing page</h3>
+                <p>A modern landing page for a Nike shoe brand.</p>
+                <div class="tags">HTML • CSS • JS</div>
+                <div class="btns">
+                    <a href="https://nike-shoe-landing-page-ui5k.vercel.app/">Live</a>
+                    <a href="https://github.com/KunalRawat16/NIKE-Shoe-Landing-page">Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="project_image/Wheather-web-app.png" alt="project">
+                <h3>Weather Web App</h3>
+                <p>A modern weather application with a clean UI.</p>
+                <div class="tags">React js • Tailwind CSS</div>
+                <div class="btns">
+                    <a href="https://react-weather-app-neon-chi.vercel.app/">Live</a>
+                    <a href="https://github.com/KunalRawat16/react-weather-app">Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="project_image/todo-list.png" alt="project">
+                <h3>Todo List App</h3>
+                <p>A simple and effective todo list application.</p>
+                <div class="tags">React js • Tailwind CSS</div>
+                <div class="btns">
+                    <a href="https://todo-list-web-app-tau.vercel.app/">Live</a>
+                    <a href="https://github.com/KunalRawat16/Todo-list-web-app">Code</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- contact section -->
+    <section id="contact" class="contact-section" style="color: #e5e5e5;">
+        <main class="container" role="main">
+            <section class="left-side" aria-label="Contact information and introduction">
+                <h1>
+                    Let’s talk<br />on something <span class="highlight">great</span><br />together
+                </h1>
+
+                <div class="contact-info">
+                    <div>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M4 4h16v16H4z" fill="none" />
+                            <polyline points="22,6 12,13 2,6" fill="none" />
+                        </svg>
+                        <span>kumarkunal8482@gmail.com</span>
+                    </div>
+                    <div>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M6.5 17.71a20.8 20.8 0 006 0" fill="none" />
+                            <path d="M2 7a20.7 20.7 0 0 0 12 12" fill="none" />
+                            <circle cx="12" cy="12" r="10" fill="none" />
+                            <path d="M15.5 10a2.5 2.5 0 0 1 4 3.5" fill="none" />
+                        </svg>
+                        <span>+918299729308</span>
+                    </div>
+                    <div>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 21s8-4.426 8-10a8 8 0 1 0-16 0c0 5.574 8 10 8 10z" fill="none" />
+                            <circle cx="12" cy="11" r="2" fill="none" />
+                        </svg>
+                        <span>Ballia UP India</span>
+                    </div>
+                </div>
+
+                <nav class="social-icons" aria-label="Social media links">
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M4 3a2 2 0 110 4 2 2 0 010-4zm0 5H1v14h6v-7.1c0-.395.2-.9.75-.9s.75.505.75.9V22h6v-9.5c0-2.79-2.21-5-5-5s-5 2.21-5 5V8z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" title="Behance" aria-label="Behance">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M2 6v12h12v-3.5H7v-1.5h9v-2H7v-2h7.5V9H6v1H4v-4zM14.225 7h2.45c.45 0 .75.04 1 .25a1.06 1.06 0 01.325.775 1.086 1.086 0 01-1.11 1.09H16c.545 0 .753-.09 1-.25a1.024 1.024 0 00.325-.75c0-.553-.224-.95-.917-1.26zM18.15 9c.465 0 .9.395.9.945 0 .54-.335.94-.9.94-.545 0-.9-.4-.9-.94 0-.55.355-.945.9-.945zM19 6v3H14.675v-.5a2.522 2.522 0 016.3-.175v-1C20.7 7.0 18 6 19 6z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" title="Instagram" aria-label="Instagram">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5A5.76 5.76 0 0122 7.75v8.5A5.76 5.76 0 0116.25 22h-8.5A5.76 5.76 0 012 16.25v-8.5A5.76 5.76 0 017.75 2zm4.25 5a5 5 0 100 10 5 5 0 000-10zm5.5-1a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM12 8.5a3.5 3.5 0 11-3.5 3.5 3.5 3.5 0 013.5-3.5z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </section>
+
+            <form class="right-side" aria-labelledby="contact-form-title" onsubmit="return false;" novalidate>
+                <label for="your-name">Your name</label>
+                <input id="your-name" name="your-name" type="text" autocomplete="name" placeholder="Jhon Smith"
+                    required />
+
+                <label for="your-email" style="margin-top: 1rem">Your email</label>
+                <input id="your-email" name="your-email" type="email" autocomplete="email" placeholder="email@gmail.com"
+                    required />
+
+                <label for="your-message" style="margin-top: 1rem">Your message</label>
+                <textarea id="your-message" name="your-message" placeholder="Your message" rows="4" required></textarea>
+
+                <button type="submit" aria-label="Send message" id="submit-btn">
+                    <span class="btn-text">Send message</span>
+                    <span class="loader" style="display: none;"></span>
+                </button>
+                <p id="form-msg"></p>
+            </form>
+        </main>
+    </section>
+
+
+
+    <!-- footer section  -->
+    <footer>
+        <div class="footer-inline">
+            <span>Kunal Rawat - Frontend Developer | UX Designer</span>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
